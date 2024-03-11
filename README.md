@@ -30,7 +30,7 @@ Here're some of the project's best features:
 <p>1. Clone the Repository</p>
 
 ```
-git clonehttps://github.com/khanfaisal79960/audio-emotion-detection.git
+git clone https://github.com/khanfaisal79960/audio-emotion-detection.git
 ```
 
 <p>2. Navigate to the Project Directoy</p>
