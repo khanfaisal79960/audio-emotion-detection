@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/materialize.min.css') }}">
+    <title>Audio Emotion Detection</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2 offset-l3 l7 offset-xl4 xl6">
+            <form
+              method="POST"
+              action="/"
+              enctype="multipart/form-data"
+            >
+              <!-- <label>Your photo</label> -->
+              <div class="file-field input-field">
+                <div class="btn grey lighten-2 grey-text text-darken-3">
+                  <span>Choose file</span>
+                  <input name="audio" id="audio" type="file" />
+                </div>
+                <div class="file-path-wrapper">
+                  <input
+                    class="file-path validate"
+                    type="text"
+                    placeholder="Please upload your file"
+                  />
+                </div>
+              </div>
+      
+              <div class="row">
+                <div class="col s12">
+                  <button type="submit" class="btn waves-effect waves-light">
+                    Upload
+                  </button>
+                </div>
+              </div>
+      
+              <div class="right-align">
+                <!-- <small
+                  >by
+                  <a
+                    href="https://herotofu.com"
+                    class="grey-text text-darken-3"
+                    target="_blank"
+                    >HeroTofu</a
+                  ></small
+                > -->
+              </div>
+            </form>
+            {% if label %}
+              <p>Predicted Emotion: {{ label }}</p>
+            {% endif %}
+            </div>
+        </div>
+      </div>
+      <footer class="page-footer fixed-bottom" style="position:fixed;bottom:0;left:0;width:100%;">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h4>Made By</h4> <br>
+              <h5 class="white-text">Khan Faisal</h5>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Links</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="https://khanfaisal.netlify.app" target="_blank">Portfolio</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.github.com/khanfaisal79960" target="_blank">Github</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.medium.com/@khanfaisal79960" target="_blank">Medium</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/khanfaisal79960/" target="_blank">Linked In</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+        </div>
+      </footer>
+</body>
+</html>
